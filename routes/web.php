@@ -17,4 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
+/*
+Route::get('/materia/listado', 'MateriaController@index');
+Route::get('/materia/create', 'MateriaController@create');
+Route::post('/materia/store', 'MateriaController@store');
+Route::get('/materia/show/{materia?}', 'MateriaController@show');
+Route::get('/materia/edit/{id}', 'MateriaController@edit');
+Route::post('/materia/update/{id}', 'MateriaController@update');
+Route::get('/materia/repore-pdf', 'MateriaController@reportePdf');
+*/
+Route::resource('materia', 'MateriaController');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dependencias', 'DependenciasController@index');
